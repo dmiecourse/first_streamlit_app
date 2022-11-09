@@ -46,3 +46,6 @@ streamlit.dataframe(my_data_rows)
 #Add another text entry box to allow user to add fruit to the list
 add_my_fruit = streamlit.text_input('What fruit would you like to add?', 'Kiwi')
 streamlit.write('Thanks for adding ', add_my_fruit)
+
+# Write the fruit into the snowflake table
+my_cur.executre("insert into fruit_load_list values ('from streamlit')")
